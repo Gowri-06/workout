@@ -14,7 +14,7 @@ from selenium.webdriver.support.select import Select
 
 
 # download chrome driver file
-service = Service("E:/selenium/chromedriver.exe")
+service = Service("http://3.110.146.90:3000/")
 driver = webdriver.Chrome(service=service)
 # our domian name
 driver.get("https://www.selfinstaller.com/")

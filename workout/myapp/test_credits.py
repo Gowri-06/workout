@@ -1,3 +1,5 @@
+# http://3.110.146.90:3000/contact#
+
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -12,7 +14,7 @@ service = Service("E:/selenium/chromedriver.exe")
 driver = webdriver.Chrome(service=service)
 
 # our domian name
-driver.get("https://www.selfinstaller.com/")
+driver.get("http://3.110.146.90:3000/")
 driver.maximize_window()
 # driver.implicitly_wait(10)
 driver.set_page_load_timeout(7000)
@@ -103,4 +105,5 @@ print(logout_element)
 logout_element.click()
 action = ActionChains(driver)
 #code logout end
+
 
