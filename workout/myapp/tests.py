@@ -121,5 +121,43 @@ driver.back()
 driver.forward()
 driver.refresh()
 #temp code ends here
+# 26-07-2022:
+# Web Element                              ID Not Present  
+# Header-self installer                        yes 
+# Header-home                                  yes and no navigating page link      
+# Header-docs                                  yes                                                       
+# Header-pricing                               yes
+# Header-contact us                            yes
+# Header-blog                                  yes
+# Header-tutorial                              yes
+# Header-Login&/Sign-up                        yes
+# Midsection-Try Now                           yes and no navigating page link
+# Footer-self installer                        yes 
+# Footer-demo                                  yes and no navigating page link
+# Footer-contact us                            yes
+# Footer-company-contct us-form-submit-button  yes
+# Footer-company-contact us-Linked in image    yes
+# Footer-company-contact us-github             yes
+# Footer-terms and conditions                  yes
+# Footer-privacy and policy                    yes
+# Footer-community-twitter                     yes
+# Footer-community-linked in                   yes
+# Login-Page-Sign in-button                    yes
+# Login-Page-Forget Password-button            yes
+# Login-Page-Signup-button      				 yes
+# Login-Page-Continue with Google              yes
+# Login-Page-Sign in with GitHub               yes 
+# Logout-section-View profile                  yes
+# credits-payment-button						 yes
+# credits-payment-back                         yes
+# projects-added                               yes
+# projects-delete  							 yes
+# projects-Test-app                            yes
+# projects-view-credentials                    yes
+# projects-downloadcredentials                 yes
+# projects-delete                              yes
+# settings-sshkey-delete                       yes
+# settings-sshusername-delete                  yes
+# settings-ipaddress-delete                    yes 
 
 

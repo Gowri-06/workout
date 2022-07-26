@@ -9,7 +9,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 # from selenium.webdriver.support import expected_conditions as EC
 # from selenium.webdriver.support.ui import WebDriverWait
 # from selenium.webdriver.common.keys import Keys  
-
+# 9ad1c0be1a2941db561eb44961ff9867511a98c5
 
 
 
@@ -19,11 +19,11 @@ from selenium.webdriver.common.action_chains import ActionChains
 service = Service("E:/selenium/chromedriver.exe")
 driver = webdriver.Chrome(service=service)
 # our domian name
-driver.get("http://3.110.146.90:3000/")
+driver.get("http://13.235.64.60:3000/")
 driver.maximize_window()
-driver.implicitly_wait(1000)
+driver.implicitly_wait(100)
 # Home login click to enter in to login page
-login_click = driver.find_element(By.XPATH, "//a[@href='/signin']").click()
+login_click = driver.find_element(By.XPATH, "//*[@id='__next']/header/div/div[3]").click()
 
 # login_click = driver.find_element(By.XPATH, "/html/body/header/div/div[3]/a")
 actions = ActionChains(driver)
@@ -33,12 +33,14 @@ actions.perform()
 # login.click()
 # print(login)
 # Enter login details
-driver.find_element(By.ID, "email-address").send_keys("xyz@gmail.com")
-driver.find_element(By.ID, "password").send_keys("xyz")
-driver.find_element(By.XPATH, "//button[text()='Sign in']").click()
-driver.find_element(By.XPATH, "//*[@id='__next']/div/div/div[1]/div[1]/div/div[2]/button/div/div[2]/p[2]").click() 
-driver.implicitly_wait(1000)
-driver.find_element(By.ID, "profile-close-btn").click()
+# driver.find_element(By.ID, "email-address").send_keys("ccc@gmail.com")
+# driver.find_element(By.ID, "password").send_keys("123")
+# driver.find_element(By.XPATH, "//button[text()='Sign in']").click()
+
+# driver.find_element(By.XPATH, "//*[@id='__next']/div/div/div[1]/div[1]/div/div[2]/button/div/div[2]/p[2]").click() 
+# driver.implicitly_wait(1000)
+# driver.find_element(By.ID, "profile-close-btn").click()
+# driver.find_element(By.XPATH, "//button[text()='Logout']").click()
 # driver.find_element(By.ID, "profile-button").click()
 
 # login_page = driver.find_element(By.CSS_SELECTOR, "button").click()
@@ -84,12 +86,15 @@ driver.find_element(By.ID, "profile-close-btn").click()
 # driver.back()
 # driver.back()
 
-driver.find_element(By.XPATH, "//a[@href='/signup']").click()
-driver.find_element(By.NAME, "email").send_keys("ccc@gmail.com")
+# driver.find_element(By.XPATH, "//*[@id='__next']/div/div/div[2]/div[2]/div[3]/div").click() 
+# driver.implicitly_wait(100)
+time.sleep(3)
+driver.find_element(By.ID, "//button[text()='Sign up']").click()
+driver.find_element(By.ID, "email-address").send_keys("dddd@gmail.com")
 # driver.find_element(By.NAME, "username").send_keys("someone.com")
 driver.find_element(By.NAME, "password").send_keys("1234")
 driver.find_element(By.NAME, "conform-password").send_keys("1234")
-# driver.find_element(By.XPATH, "//button[text()='Sign Up']").click()
+driver.find_element(By.XPATH, "//button[text()='Sign Up']").click()
 # driver.back()
 # driver.back()
 
