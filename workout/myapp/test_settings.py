@@ -8,10 +8,12 @@ from selenium.webdriver.common.action_chains import ActionChains
 # download chrome driver file
 service = Service("E:/selenium/chromedriver.exe")
 driver = webdriver.Chrome(service=service)
+
 # our domian name
-driver.get("http://13.235.64.60:3000/")
+driver.get("http://3.6.116.230:3000/")
 driver.maximize_window()
 driver.implicitly_wait(10)
+
 # Home login click to enter in to login page
 login_click = driver.find_element(By.XPATH, "//*[@id='__next']/header/div/div[3]").click()
 
@@ -23,8 +25,8 @@ actions.perform()
 # login.click()
 # print(login)
 # Enter login details
-driver.find_element(By.ID, "email-address").send_keys("ccc@gmail.com")
-driver.find_element(By.ID, "password").send_keys("123")
+driver.find_element(By.ID, "email-address").send_keys("xyz@gmail.com")
+driver.find_element(By.ID, "password").send_keys("xyz")
 driver.find_element(By.XPATH, "//button[text()='Sign in']").click()
 # login = driver.find_element(By.CLASS_NAME, "login")
 # login.click()
@@ -47,8 +49,8 @@ ssh_username_link.click()
 #delete ssh key code start
 # ssh_key_delete = driver.find_element(By.XPATH,"//*[@id='__next']/div/div/div[2]/div[4]/div/div/div/div[2]/button")
 # ssh_key_delete.click()
-# ssh_key_delete = driver.find_element(By.CLASS_NAME, "delete_btn_open_btn")
-# ssh_key_delete.click()
+ssh_key_delete = driver.find_element(By.NAME, "ssh-kye")
+ssh_key_delete.click()
 #delete ssh key code end
 
 #ssh_key_pop_up_delete start
@@ -71,8 +73,8 @@ time.sleep(3)
 # ssh_username_delete = driver.find_element(By.XPATH, "/html/body/main/section/section/div[3]/div[1]/div/button")
 # ssh_username_delete.click()
 # time.sleep(3)
-# ssh_username_delete = driver.find_element(By.CLASS_NAME, "delete_btn_open_btn")
-# ssh_username_delete.click()
+ssh_username_delete = driver.find_element(By.NAME, "ssh-user-delete")
+ssh_username_delete.click()
 #ssh username delete code end
 
 #ssh username popup delete start
@@ -98,8 +100,8 @@ ip_address_link.click()
 # ip_address_delete = driver.find_element(By.XPATH, "/html/body/main/section/section/div[4]/div[1]/div/button")
 # ip_address_delete.click()
 # time.sleep(3)
-# ip_address_delete = driver.find_element(By.CLASS_NAME, "delete_btn_open_btn")
-# ip_address_delete.click()
+ip_address_delete = driver.find_element(By.NAME, "ip-delete")
+ip_address_delete.click()
 #IP address delete code end
 
 #IP address popup delete start

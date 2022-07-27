@@ -14,11 +14,8 @@ service = Service("E:/selenium/chromedriver.exe")
 driver = webdriver.Chrome(service=service)
 
 # our domian name
-driver.get("http://13.235.64.60:3000/")
+driver.get("http://3.6.116.230:3000//")   
 driver.maximize_window()
-
-
-
 
 # Home login click to enter in to login page
 login_click = driver.find_element(By.XPATH, "//*[@id='__next']/header/div/div[3]").click()
@@ -30,8 +27,8 @@ actions.perform()
 time.sleep(3)
 
 # Enter login details
-driver.find_element(By.NAME, "email").send_keys("ccc@gmail.com")
-driver.find_element(By.ID, "password").send_keys("123")
+driver.find_element(By.NAME, "email").send_keys("xyz@gmail.com")
+driver.find_element(By.ID, "password").send_keys("xyz")
 driver.find_element(By.XPATH, "//button[text()='Sign in']").click()
 time.sleep(3)
 
@@ -64,7 +61,7 @@ driver.find_element(By.XPATH, "//button[text()='Add Credit Points']").click()
 add_credits = driver.find_element(By.NAME, "amount").send_keys("10")
 driver.find_element(By.XPATH, "//button[text()='Proceed']").click()
 
-#Pay with card
+#Pay with card details
 email_field = driver.find_element(By.NAME, "email").send_keys("abc@gmail.com")
 card_info = driver.find_element(By.NAME, "cardNumber").send_keys("4242 4242 4242 4242")
 time.sleep(4)
@@ -79,7 +76,11 @@ city_name = driver.find_element(By.NAME, "billingLocality").send_keys("ny city")
 postal_code = driver.find_element(By.NAME, "billingPostalCode").send_keys("96522")
 billing_administrative_area = driver.find_element(By.NAME, "billingAdministrativeArea").send_keys("Tamil Nadu")
 pay_submit = driver.find_element(By.CLASS_NAME, "SubmitButton-IconContainer").click()
+driver.implicitly_wait(20)
 driver.find_element(By.ID, "topup-success").click()
+#End code
+
+
 # driver.implicitly_wait(10)
 # driver.find_element(By.XPATH, "/html/body/div/div/div/div[1]/header/div/div/a/div/div/div[2]/div/span").click()
 # driver.back()

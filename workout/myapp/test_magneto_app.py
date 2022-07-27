@@ -18,10 +18,12 @@ from selenium.webdriver.common.action_chains import ActionChains
 # download chrome driver file
 service = Service("E:/selenium/chromedriver.exe")
 driver = webdriver.Chrome(service=service)
+
 # our domian name
 driver.get("http://13.235.64.60:3000/")
 driver.maximize_window()
 driver.implicitly_wait(1000)
+
 # Home login click to enter in to login page
 login_click = driver.find_element(By.XPATH, "//*[@id='__next']/header/div/div[3]").click()
 
