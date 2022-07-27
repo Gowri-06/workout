@@ -57,7 +57,7 @@ all_project_link.click()
 
 #Projects popup delete start
 # projects_pop_up_delete = driver.find_element(By.XPATH, "//a[@href='/frontend/project/50/']").click()
-# projects_pop_up_delete = driver.find_element(By.CLASS_NAME, "delete_btn")
+# projects_pop_up_delete = driver.find_element(By.NAME, "all-projects-delete").click()
 # projects_pop_up_delete.click()
 #Projects popup delete end
 
@@ -72,7 +72,7 @@ single_project_link.click()
 # single_project_link = driver.find_element(By.LINK_TEXT, "testing")
 # single_project_link.click()
 # click project name to open
-test_link_open = driver.find_element(By.XPATH, "//*[@id='project-details225']/div/div") 
+test_link_open = driver.find_element(By.XPATH, "//*[@id='project-details223']/div/div") 
 test_link_open.click()
 time.sleep(3)
 # click project name to close
